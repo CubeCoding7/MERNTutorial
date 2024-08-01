@@ -13,7 +13,14 @@ const PORT = 5000;
 app.use(cors({
     origin: '*'
 }));
+
 app.use(express.json());
+
+app.get('/decks', async (req: Request, res: Response) => {
+    const decks = await Deck.find()
+
+    res.json(decks)
+})
 
 app.post('/decks', async (req: Request, res: Response) => {
     
