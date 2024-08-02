@@ -4,3 +4,39 @@
   padding: 2rem;
   text-align: center;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.App form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.decks {
+  display: grid;
+  width: 500px;
+  margin: 0 auto;
+  grid-gap: 10px;
+  color: black;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.decks li {
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.decks li {
+  background: #eee;
+}
