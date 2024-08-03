@@ -27,6 +27,7 @@
 }
 
 .decks li {
+  position: relative;
   display: flex;
   height: 120px;
   justify-content: center;
@@ -37,6 +38,9 @@
   cursor: pointer;
 }
 
-.decks li {
-  background: #eee;
+.decks li button {
+  position: absolute;
+  font-size: 10px;
+  top: 5px;
+  right: 5px;
 }
