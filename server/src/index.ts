@@ -28,7 +28,7 @@ app.post("/decks", createDeckController);
 app.delete("/decks/:deckId", deleteDeckController);
 app.get("/decks/:deckId", getDeckController);
 app.post("/decks/:deckId/cards", createCardController);
-app.post("/decks/:deckId/cards/:index", deleteCardController);
+app.delete("/decks/:deckId/cards/:index", deleteCardController);
 
 mongoose.connect(process.env.MONGO_URI!).then(() => {
   console.log(`listening on port ${PORT}`);
