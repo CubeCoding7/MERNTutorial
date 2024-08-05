@@ -30,6 +30,9 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 app.get("/decks", getDecksController);
 app.post("/decks", createDeckController);
 app.delete("/decks/:deckId", deleteDeckController);
