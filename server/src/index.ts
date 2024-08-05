@@ -30,8 +30,13 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 // Routes
-app.get("/", (req, res) => {
-  res.send("Hello World");
+app.get("/", async (req: Request, res: Response) => {
+  const decks = await Deck.find();
+  res.json(decks);
+});
+app.get("/test", async (req: Request, res: Response) => {
+  const decks = await Deck.find();
+  res.json(decks);
 });
 app.get("/decks", getDecksController);
 app.post("/decks", createDeckController);
